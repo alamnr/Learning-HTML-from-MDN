@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client side Form validation using java script </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans&amp;display=swap">
+    <style>
+        input:invalid {
+            border: 2px dashed red;
+        }
+        input:valid {
+            border: 2px solid black;
+        }
+        form {
+            font: 1em "Josefin Sans", sans-serif;
+            margin: 25px auto;
+            max-width: 400px;
+        }
+        input, button {
+            font: inherit;
+            height: 30px;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form >
+        <label for="mail">I would like you to provide me with an email address:</label>
+        <input type="email" id="mail" name="mail">
+        <button>submit</button>
+    </form>
+    <script>
+        const email = document.getElementById("mail");
+        email.addEventListener("input",(event)=>{
+            if(email.validity.typeMismatch){
+                email.setCustomValidity("I am expecting an email address ");
+            } else {
+                email.setCustomValidity("");
+            }
+        });
+    </script>
+</body>
+</html>

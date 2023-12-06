@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling form elements</title>
+    <style>
+        /*
+        .box {
+            float: left;
+            width: 150px;
+            height: 150px;
+            border: 2px solid grey;
+            margin: 30px;
+            background-color: rgb(207, 232, 220);
+            border-radius: 5px;
+            padding: 1em;
+        }
+
+        .special {
+            background-color: rgb(148, 255, 172);
+            padding: 10px;
+            color: purple;
+        }
+        
+        .clear {
+            clear: left;
+        }
+        .wrapper{
+            background-color: rgb(148,255,172);
+            padding: 10px;
+            color: purple;
+            display: flow-root;
+        }*/
+        body{
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        div:nth-of-type(1){
+            width: 48%;
+            float: left;
+        }
+        div:nth-of-type(2){
+            width: 48%;
+            float: right;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            margin-top: 10px;
+        }
+        ul li  label{
+            width: 20%;
+            text-align: right;
+            display: inline-block;
+        }
+        
+        fieldset {
+            position: relative;
+        }
+
+        legend{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        input,
+        textarea,
+        select,
+        button{
+            font-family: inherit;
+            font-size: 100%;
+            width: 75%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>2 column layout example</h1>
+    <div>
+        <h2>First column</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus itaque incidunt vel laudantium non, fugit aut voluptatem officiis molestias laborum quod ducimus doloribus explicabo dolor, tempore modi beatae totam perferendis!</p>
+        <form action="#" method="post">
+            <ul>
+                <li>
+                    <label for="text">text:</label>
+                    <input type="text" id="text" name="text" placeholder="Which font do I use?"/>
+                </li>
+                <li>
+                    <label for="date">date:</label>
+                    <input type="date" id="date" name="date" placeholder="dd/mm/yyyy"/>
+                </li>
+                <li>
+                    <label for="select">select:</label>
+                    <select id="select" name="select">
+                        <optgroup label="Actor">
+                            <option>Ace</option>
+                            <option>Jane</option>
+                            <option>Tarjan</option>
+                        </optgroup>
+                        <optgroup label="producer">
+                            <option>Kavalia</option>
+                            <option selected>Julia</option>
+                        </optgroup>
+                    </select>
+                </li>
+                <li>
+                    <label for="textarea">textarea:</label>
+                    <textarea id="textarea" name="textarea" placeholder="This is multiline text input form widget"></textarea>
+                </li>
+                <li>
+                    <label></label>
+                    <input type="submit" value="Which font do I use?"/>
+                </li>
+                <li>
+                    <label></label>
+                    <button type="submit">Which font do I use?</button>
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="checkbox" id="" name=""/>
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="radio" id="" name=""/>
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="range" id="" name="" max="100" min="0" step="5" />
+                </li>
+            </ul>
+            <fieldset>
+                <legend>Choose all the vegetables you like to eat</legend>
+                <ul>
+                    <li><label for="carr">Carrots</label><input type="radio" id="carr" name="favVeg"/></li>
+                    <li><label for="peas">Peas</label><input type="radio" id="peas" name="favVeg"/></li>
+                    <li><label for="cab">Cabbage</label><input type="radio" id="cab" name="favVeg"/></li>
+                </ul>
+            </fieldset>
+        </form>
+    </div>
+    <div>
+        <h2>Second column</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias aliquid mollitia voluptas dolore, impedit quas. Consequuntur provident maxime earum nisi velit magni, expedita iusto odio, sunt repellat, optio et placeat?</p>
+        <form action="#" method="post" id="myForm">
+            <ul>
+                <li>
+                    <label for="text">text:</label>
+                    <input type="text" id="text" name="text" placeholder="Which font do I use?"/>
+                </li>
+                <li>
+                    <label for="date">date:</label>
+                    <input type="date" id="date" name="date" placeholder="dd/mm/yyyy"/>
+                </li>
+                <li>
+                    <label for="select">select:</label>
+                    <select id="select" name="select">
+                        <optgroup label="Actor">
+                            <option>Ace</option>
+                            <option>Jane</option>
+                            <option>Tarjan</option>
+                        </optgroup>
+                        <optgroup label="producer">
+                            <option>Kavalia</option>
+                            <option selected>Julia</option>
+                        </optgroup>
+                    </select>
+                </li>
+                <li>
+                    <label for="textarea">textarea:</label>
+                    <textarea id="textarea" name="textarea" placeholder="This is multiline text input form widget"></textarea>
+                </li>
+                <li>
+                    <label></label>
+                    <input type="submit" value="Which font do I use?"/>
+                </li>
+                <li>
+                    <label></label>
+                    <button type="submit">Which font do I use?</button>
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="checkbox" id="" name=""/>
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="radio" id="" name=""/>
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="range" id="" name="" max="100" min="0" step="5" />
+                </li>
+            </ul>
+        </form>
+    </div>
+<!--     
+    <div class="wrapper">
+        <h1>Simple float example</h1>
+        <div class="box">Float</div>
+        <p class="special">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates libero, maiores odio
+            natus architecto corporis veniam! Accusamus, consectetur! Officiis laudantium libero aliquam accusamus
+            ratione provident, dolor fugit ex quae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ipsum laudantium error fugiat autem rerum laborum at recusandae, alias dicta veritatis itaque obcaecati
+            tenetur vitae cumque quis unde ipsa debitis aliquam. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Iure facilis aperiam eos itaque molestias voluptas suscipit mollitia deserunt? Eligendi placeat
+            voluptatem suscipit explicabo officia labore, hic ad quidem quae accusantium?</p>
+        <p class="clear">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates libero, maiores odio natus
+            architecto corporis veniam! Accusamus, consectetur! Officiis laudantium libero aliquam accusamus ratione
+            provident, dolor fugit ex quae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+            laudantium error fugiat autem rerum laborum at recusandae, alias dicta veritatis itaque obcaecati tenetur
+            vitae cumque quis unde ipsa debitis aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+            facilis aperiam eos itaque molestias voluptas suscipit mollitia deserunt? Eligendi placeat voluptatem
+            suscipit explicabo officia labore, hic ad quidem quae accusantium?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates libero, maiores odio natus architecto
+            corporis veniam! Accusamus, consectetur! Officiis laudantium libero aliquam accusamus ratione provident,
+            dolor fugit ex quae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laudantium
+            error fugiat autem rerum laborum at recusandae, alias dicta veritatis itaque obcaecati tenetur vitae cumque
+            quis unde ipsa debitis aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis
+            aperiam eos itaque molestias voluptas suscipit mollitia deserunt? Eligendi placeat voluptatem suscipit
+            explicabo officia labore, hic ad quidem quae accusantium?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates libero, maiores odio natus architecto
+            corporis veniam! Accusamus, consectetur! Officiis laudantium libero aliquam accusamus ratione provident,
+            dolor fugit ex quae nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laudantium
+            error fugiat autem rerum laborum at recusandae, alias dicta veritatis itaque obcaecati tenetur vitae cumque
+            quis unde ipsa debitis aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure facilis
+            aperiam eos itaque molestias voluptas suscipit mollitia deserunt? Eligendi placeat voluptatem suscipit
+            explicabo officia labore, hic ad quidem quae accusantium?</p>
+    </div> -->
+    
+</body>
+
+</html>

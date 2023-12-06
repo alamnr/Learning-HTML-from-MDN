@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Default Form Validation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans&amp;display=swap">
+    <style>
+        body{
+            margin: 25px auto;
+            max-width: 600px;
+            font-family: "Josefin Sans", sans-serif;
+
+        }
+        input,button{
+            font-family: inherit;
+            font-size: inherit;
+            height: 30px;
+            border-radius: 5px;
+        }
+        input:valid{
+            border: 1px solid black;
+            
+        }
+        input:invalid{
+            border: 1px solid red;
+        }
+        input:invalid:required{
+            background-image: linear-gradient(to right, pink, lightgreen);
+        }
+        input + span {
+            position: relative;
+        }
+        
+        input:required + span::after{
+            content: "required";
+            color: white;
+            background-color: black;
+            padding: 5px 5px;
+            position: absolute;
+            top: -36px;
+            left: -80px;
+            
+        }
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <div>
+        <label for="choose">Would you prefer a banana or cherry?</label>
+        <input id="choose" name="i-like" required pattern="[Bb]anana|[Cc]herry">
+        <span></span>
+        </div>
+        <div>
+        <label for="email">Enter email:</label>
+        <input type="email" id="email" name="email" multiple required >
+        <span></span>
+        </div>
+        <div>
+            <label for="number">How many ?</label>
+            <input type="number" id="number" name="amount" value="1" min="1" max="10" step=".5">
+        </div>
+        <div><button>Submit</button></div>
+        
+    </form>
+    
+</body>
+</html>
